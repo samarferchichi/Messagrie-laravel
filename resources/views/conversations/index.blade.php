@@ -1,7 +1,9 @@
 
-@foreach($users as $user)
-<ul>
-<li>{{ $user->name }}</li>
+@extends('layouts.app')
+@section('content')
 
-</ul>
-@endforeach
+<div class="container">
+@include('conversations.users', ['users' => $users])
+</div>
+
+@endsection
